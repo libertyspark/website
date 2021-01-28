@@ -1,0 +1,10 @@
+{{ range where $.Site.Data.partners.partners "featured" true | first 4 }}
+  <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+    {{ if .image }}
+      {{ $image := resources.Get .image }}
+      <img class="h-12" src="{{ $image.Permalink }}" alt="{{ .name }}" />
+      {{ else }}
+      {{ .name }}
+    {{ end }}
+  </div>
+{{ end }}
