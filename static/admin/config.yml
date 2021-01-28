@@ -2,6 +2,7 @@ backend:
   name: github
   repo: libertyspark/website
   branch: main
+  site_domain: quizzical-shannon-5ff859.netlify.com
   
 local_backend: false
 
