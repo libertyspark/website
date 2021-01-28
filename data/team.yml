@@ -6,7 +6,7 @@ teamMembers:
     connections:
       - connection: Linked-In
         handle: ike-holley
-  - fullName: Jason Bullard 1
+  - fullName: Jason Bullard
     position: Technology
     email: jason.bullard@libertyspark.org
     profile: /images/jason-bullard.png
