@@ -1,0 +1,297 @@
+{{ define "main" }}
+<!-- HERO -->
+<section class="text-gray-800 body-font">
+  <div class="relative container max-w-7xl mx-auto flex px-5 py-24 md:flex-row flex-col items-center md:items-start">
+    <div class="px-4 lg:w-2/3 sm:px-8 xl:pr-16 mb-8">
+      <h2
+        class="max-w-md md:max-w-full mx-auto mt-1 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
+        {{ i18n "home_hero_title" | safeHTML }}
+      </h2>
+      <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
+        {{ i18n "home_hero_subtitle" }}
+      </p>
+      <div class="mt-10 flex items-center justify-start">
+        <a href="#about-us" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+          {{ i18n "home_hero_learn_more" }}
+        </a>
+        <a href="#connect"
+          class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-600 hover:bg-yellow-700">
+          {{ i18n "home_hero_connect_now" }}
+        </a>
+      </div>
+    </div>
+    <div class="lg:max-w-lg md:w-full w-5/6 z-1">
+      {{ $image := resources.Get "images/hero.jpeg" }}
+      <img class="object-cover object-center rounded" alt="hero" src="{{ $image.Permalink }}" />
+    </div>
+  </div>
+</section>
+<!-- END HERO -->
+
+<!-- TODO: Get more partners -->
+<!-- PARTNERS -->
+<section class="text-gray-800 body-font">
+  <div class="container max-w-7xl mx-auto">
+    <div class="max-w-screen-xl mx-auto pt-8 pb-24 px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+
+        {{ range where $.Site.Data.partners.partners "featured" true | first 4 }}
+        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+          {{ if .image }}
+          {{ $image := resources.Get .image }}
+          <img class="h-12" src="{{ $image.Permalink }}" alt="{{ .name }}" />
+          {{ else }}
+            {{ .name }}
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+</section>
+<!-- END PARTNERS -->
+
+<!-- ABOUT US -->
+<section class="relative text-white body-font bg-gray-800" id="about-us">
+  <div class="container px-5 py-24 mx-auto max-w-7xl ">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl leading-9 tracking-wide font-extrabold sm:text-4xl sm:leading-10">
+        {{ i18n "about_us_title" }}
+      </h2>
+      <p class="mt-3 max-w-2xl mx-auto text-xl leading-7 text-gray-200 sm:mt-4">
+        {{ i18n "about_us_subtitle" }}
+      </p>
+    </div>
+
+    <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+      <div>
+        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+          </svg>
+        </div>
+        <div class="mt-5">
+          <h5 class="text-lg leading-6 font-medium">
+            {{ i18n "cultivate" }}
+          </h5>
+          <p class="mt-2 text-base leading-6 text-gray-300">
+            {{ i18n "cultivate_description" | safeHTML }}
+          </p>
+        </div>
+      </div>
+      <div class="mt-10 lg:mt-0">
+        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+          </svg>
+        </div>
+        <div class="mt-5">
+          <h5 class="text-lg leading-6 font-medium">
+            {{ i18n "curate" }}
+          </h5>
+          <p class="mt-2 text-base leading-6 text-gray-300">
+            {{ i18n "curate_description" | safeHTML }}
+          </p>
+        </div>
+      </div>
+      <div class="mt-10 lg:mt-0">
+        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z" />
+          </svg>
+        </div>
+        <div class="mt-5">
+          <h5 class="text-lg leading-6 font-medium">
+            {{ i18n "accelerate" }}
+          </h5>
+          <p class="mt-2 text-base leading-6 text-gray-300">
+            {{ i18n "accelerate_description" | safeHTML }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END ABOUT US-->
+
+<!-- TODO: Create project stats CTA -->
+<!-- PROJECT STATS -->
+<!-- END PROJECT STATS -->
+
+<!-- FEATURES -->
+<section class="text-gray-600 body-font" id="features">
+  <div class="container px-5 py-24 mx-auto max-w-7xl ">
+    {{ partial "section-title" (dict "Title" (i18n "features_title") "Subtitle" (i18n "features_subtitle") ) }}
+
+    <div class="container px-5 mx-auto flex flex-wrap">
+      {{ $image := resources.Get "images/lab-hero.jpeg" }}
+      <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden hidden lg:block">
+        {{ $image := resources.Get "images/lab-hero.jpeg" }}
+        <img alt="feature" class="object-cover object-center h-full w-full" src="{{ $image.Permalink }}" />
+      </div>
+      <div class="flex flex-col flex-wrap -mb-10 lg:w-1/2 lg:pl-12 lg:text-left">
+        {{ range where $.Site.Data.features.features "featured" true | first 5 }}
+        <div class="mb-10">
+          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500">
+            {{ partial "svg" (dict "svgPath" .icon "class" "h-8 w-8 text-white") }}
+          </div>
+          <div class="mt-2">
+            <h5 class="text-lg leading-6 font-medium text-gray-900">
+              {{ .name }}
+            </h5>
+            <p class="mt-2 text-base leading-6">
+              {{ .description }}
+            </p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END FEATURES -->
+
+<!-- TODO: Create a folder/content for upcoming events -->
+<!-- UPCOMING EVENTS -->
+
+<!-- END UPCOMING EVENTS-->
+
+<!-- TEAM -->
+<section class="text-gray-600 body-font bg-gray-50" id="team">
+  <div class="container px-5 py-24 mx-auto max-w-7xl ">
+    {{ partial "section-title" (dict "Title" (i18n "team_title") "Subtitle" (i18n "team_subtitle") ) }}
+
+    <ul
+      class="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 md:grid-cols-3 lg:grid-cols-4 lg:max-w-5xl text-center">
+      {{ range $.Site.Data.team.teamMembers }}
+      <li>
+        <div class="space-y-6">
+          {{ $image := resources.Get .profile }}
+          <img 
+          class="mx-auto h-40 w-40 rounded-full shadow-lg" 
+          src="{{ $image.Permalink }}"
+          alt="{{ .fullName }} profile" />
+          
+          <div class="space-y-2">
+            <div class="text-lg leading-6 font-medium space-y-1">
+              <h4>{{ .fullName }}</h4>
+              <p class="text-yellow-600">{{ .position }}</p>
+            </div>
+            <ul class="flex justify-center space-x-5 flex-wrap">
+              {{ range .connections }}
+                {{ $connection := . }}
+                {{ range first 1 (where $.Site.Data.icons.icons "brand" $connection.connection) }}
+                <li class="w-6 h-6 mb-2">
+                  {{ $link := printf .link $connection.handle }}
+                  <a href="{{ $link }}" target="_blank">
+                    {{ partial "svg" (dict "svgPath" .icon "class" "text-gray-600 hover:text-yellow-500" ) }}
+                  </a>
+                </li>
+                {{ end }}
+              {{ end }}
+
+              {{ range .socialLinks }}
+              <li class="w-6 h-6 hover:text-yellow-500 mb-2">
+                {{ $cur := . }}
+                {{ $component := (printf "social-icons/%s" $cur.brand ) }}
+                {{ partial $component (dict "handle" $cur.handle) }}
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+<!-- END TEAM -->
+
+<!-- JOIN THE TEAM -->
+<!-- END JOIN THE TEAM -->
+
+<!-- TODO: Create a folder/content for blog -->
+<!-- FROM THE BLOG -->
+<!-- END FROM THE BLOG -->
+
+<!-- CONTACT SECTION -->
+<section class="text-gray-600 body-font" id="connect">
+  <div class="container px-5 py-24 mx-auto max-w-7xl ">
+    {{ partial "section-title" (dict "Title" (i18n "contact_us_title") "Subtitle" (i18n "contact_us_subtitle") ) }}
+
+    <div class="mx-auto flex lg:flex-nowrap flex-wrap">
+      <div
+        class="lg:w-1/2 w-full bg-gray-300 rounded-lg overflow-hidden lg:mr-10 p-10 flex items-end justify-start relative order-2 lg:order-1">
+        <iframe title="Liberty Spark Cell"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77917.86656324343!2d0.5243145926306194!3d52.38975890791403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d839f46dedbd27%3A0x33717c8587c70f18!2sLiberty%20Spark!5e0!3m2!1sen!2suk!4v1610629969354!5m2!1sen!2suk"
+          width="100%" height="100%" aria-hidden="false" class="absolute inset-0"></iframe>
+        <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+          <div class="lg:w-1/2 px-6">
+            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">
+              EMAIL
+            </h2>
+            <a href="mailto:info@libertyspark.org" class="text-yellow-500 leading-relaxed">
+              info@libertyspark.org
+            </a>
+          </div>
+          <div class="lg:w-1/2 px-6">
+            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">
+              DSN
+            </h2>
+            <p class="leading-relaxed">312-226-0000</p>
+            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
+              COMMERCIAL
+            </h2>
+            <p class="leading-relaxed">+44 1638 52 0000</p>
+          </div>
+        </div>
+      </div>
+      <div class="lg:w-1/2 bg-white flex flex-col md:ml-auto w-full px-8 mb-8 lg:mb-0 order-1 lg:order-2">
+        <form name="contact" method="POST" netlify>
+          <div class="relative mb-4">
+            <label htmlFor="name" class="leading-7 text-sm text-gray-600">
+              Name
+            </label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Full Name"
+              class="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+          </div>
+          <div class="relative mb-4">
+            <label htmlFor="email" class="leading-7 text-sm text-gray-600">
+              Email
+            </label>
+            <input type="email" id="email" name="email" required autocomplete="email"
+              placeholder="you@best-idea-ever.com"
+              class="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+          </div>
+          <div class="relative mb-4">
+            <label htmlFor="email" class="leading-7 text-sm text-gray-600">
+              Telephone
+            </label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="44 01638 52 0000"
+              class="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+          </div>
+          <div class="relative mb-4">
+            <label htmlFor="message" class="leading-7 text-sm text-gray-600">
+              Message
+            </label>
+            <textarea id="messageText" name="messageText" required
+              placeholder="Explain your problem, provide examples, and any solutions you have"
+              class="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+          </div>
+          <p class="text-xs text-gray-500 my-3">
+            {{ i18n "contact_form_tos" | safeHTML }}
+          </p>
+          <button type="submit"
+            class="items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:border-yellow-700 active:bg-yellow-700 transition ease-in-out duration-150">
+            {{ i18n "contact_form_submit_button" }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- END CONTACT SECTION -->
+{{ end }}

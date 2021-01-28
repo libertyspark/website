@@ -1,0 +1,35 @@
+<div
+  class="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 md:grid-cols-3 lg:max-w-5xl text-center"
+>
+  {{ range $.Site.Data.team.teamMembers }}
+    <div>
+      <div class="space-y-6">
+         {{ $image := resources.Get .profile }}
+          <img 
+          class="mx-auto h-40 w-40 rounded-full shadow-lg" 
+          src="{{ $image.Permalink }}"
+          alt="{{ .fullName }} profile" />
+          
+        <div class="space-y-2">
+          <div class="text-lg leading-6 font-medium space-y-1">
+            <h4>{{ .fullName }}</h4>
+            <p class="text-yellow-600">{{ .position }}</p>
+          </div>
+          <div class="flex justify-center space-x-5 flex-wrap">
+            {{ range .connections }}
+            {{ $connection := . }}
+            {{ range first 1 (where $.Site.Data.icons.icons "brand" $connection.connection) }}
+            <div class="w-6 h-6 mb-2">
+              {{ $link := printf .link $connection.handle }}
+              <a href="{{ $link }}" target="_blank">
+                {{ partial "svg" (dict "svgPath" .icon "class" "text-gray-600 hover:text-yellow-500" ) }}
+              </a>
+            </div>
+            {{ end }}
+          {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</div>

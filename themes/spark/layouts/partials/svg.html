@@ -1,0 +1,4 @@
+{{ $svgPath := resources.Get .svgPath }}
+{{ $svg := (printf "assets/%s" $svgPath ) | readFile | safeHTML }}
+
+<inline-svg class="{{ with .class }}{{ . }} {{ end }}">{{ $svg }}</inline-svg>

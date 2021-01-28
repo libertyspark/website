@@ -1,0 +1,7 @@
+icons:
+  - brand: Linked-In
+    link: https://linkedin.com/in/%s
+    icon: /images/linkedin.svg
+  - brand: Github
+    link: https://github.com/%s
+    icon: /images/github.svg

@@ -1,0 +1,16 @@
+main:
+  - weight: 10
+    name: About Us
+    url: /about
+  - weight: 10
+    name: Airmen
+    url: /airmen
+  - weight: 10
+    name: Blog
+    url: /blog
+  - weight: 10
+    name: Lab 48
+    url: /lab
+  - weight: 10
+    name: Partners
+    url: /partners

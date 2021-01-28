@@ -1,0 +1,33 @@
+features:
+  - featured: true
+    name: Additive Manufacturing
+    description: Implementing advances in 3D-Printing, Robotics, and Data Analysis;
+      Liberty Spark positions the Air Force at the cutting edge of technology
+      solving day-to-day pain points in everyday work by enhancing capability.
+    icon: /images/cube-transparent.svg
+  - featured: true
+    name: AR & VR Solutions
+    description: Liberty Spark leverages advances in AR/VR technology to find
+      innovative ways to meet Warfighter's training, marketing, and operational
+      needs.
+    icon: /images/arrows-expand.svg
+  - featured: true
+    name: Web & App Development
+    description: We have personnel with the knowledge to build in-house web
+      development, SharePoint communication sites, and phone application
+      solutions, or leverage industry partnerships to meet the needs of our
+      Warfighter's communication needs.
+    icon: /images/desktop-computer.svg
+  - featured: true
+    name: Bootcamps & Training
+    description: Liberty Spark enhances the knowledge of each Airman, providing the
+      capability to overcome challenges as they arise on the frontline. Learn a
+      skill set that can be used in the Squadron to foster an innovative
+      culture.
+    icon: /images/briefcase.svg
+  - featured: true
+    name: Business Intelligence
+    description: We help to develop machine learning and artificial intelligence
+      capabilities into business workflows allowing you to automate redundant
+      tasks.
+    icon: /images/academic-cap.svg

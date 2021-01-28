@@ -1,0 +1,219 @@
+backend:
+  name: github
+  repo: libertyspark/website
+  branch: main
+  
+local_backend: true
+
+media_folder: /assets/images
+public_folder: /images
+
+collections:
+  - label: Settings
+    name: settings
+    editor:
+      preview: false
+    files:
+      - file: config/_default/menu.yml
+        label: Primary Menu
+        name: primaryMenu
+        fields:
+          - label: main
+            name: main
+            widget: list
+            fields:
+              - { label: name, name: name, widget: string, required: true }
+              - { label: url, name: url, widget: string, required: true }
+              - { label: weight, name: weight, widget: number, required: true, default: 10, min: 10, step: 10 }
+
+  - label: Page
+    name: page
+    folder: content
+    create: true
+    editor:
+      preview: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        required: true
+      - label: Subtitle
+        name: subtitle
+        widget: string
+        required: true
+      - label: Slug
+        name: slug
+        widget: string
+        required: true
+        pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$','A slug can have no spaces or special characters']
+        hint: A slug is a short name used to navigate to the page (i.e. aboutus, tos, home)
+      - label: Menu
+        name: menu
+        widget: object
+        collapsed: true
+        hint: Add this item as a child menu to the primary navigation
+        required: false
+        fields:
+          - label: main
+            name: main
+            widget: object
+            required: false
+            fields:
+              - label: Title
+                name: title
+                widget: string
+                required: false
+              - label: weight
+                name: weight
+                widget: number
+                required: false
+                min: 20
+                step: 10
+              - label: Parent
+                name: parent
+                required: false
+                widget: relation
+                collection: settings
+                file: primaryMenu
+                search_fields: ["main.*.name"]
+                value_field: "main.*.name"
+              - label: Icon
+                name: pre
+                widget: file
+                allow_multiple: false
+                required: false
+      - label: Body
+        name: body
+        widget: markdown
+        required: true
+
+  - label: Data
+    name: data
+    editor:
+      preview: false
+    files:
+      - file: data/features.yml
+        label: Features
+        name: features
+        fields:
+          - label: Features
+            name: features
+            label_singular: Feature
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+                required: true
+              - label: Featured
+                name: featured
+                required: true
+                widget: boolean
+                default: false
+                hint: When enabled this item will be featured on the home page. (Only 5 items are shown on the page no matter how many are actually enabled)
+              - label: Description
+                name: description
+                widget: string
+                required: true
+              - label: Icon
+                name: icon
+                widget: file
+                required: true
+
+      - file: data/team.yml
+        label: Team
+        name: Team
+        fields:
+          - label: Team Members
+            name: teamMembers
+            label_singular: Team Member
+            widget: list
+            fields:
+              - label: Full Name
+                name: fullName
+                widget: string
+                required: true
+              - label: Position
+                name: position
+                widget: string
+                required: true
+              - label: Email
+                name: email
+                widget: string
+                required: true
+                pattern: ['\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b', "A valid Liberty Spark email address is required."]
+              - label: Profile
+                name: profile
+                widget: file
+                required: true
+              - label: Connections
+                name: connections
+                label_singular: Connection
+                widget: list
+                fields:
+                  - label: Connection
+                    name: connection
+                    widget: relation
+                    collection: data
+                    file: socialIcons
+                    search_fields: ["icons.*.brand"]
+                    value_field: "icons.*.brand"
+                  - label: Handle
+                    name: handle
+                    hint: A unique identifier for the individual on the connection
+                    widget: string
+                    required: true
+
+      - file: data/icons.yml
+        label: Social Icons
+        name: socialIcons
+        fields:
+          - label: Icons
+            name: icons
+            label_singular: Icon
+            widget: list
+            fields:
+              - label: Brand
+                name: brand
+                widget: string
+                required: true
+              - label: Url
+                name: link
+                widget: string
+                required: true
+                hint: "A link for a social media site also includes a handle, format link using the placeholder %s (ex. http://facebook.com/%s"
+              - label: Icon
+                name: icon
+                widget: file
+                required: true
+
+      - file: data/partners.yml
+        label: Partners
+        name: partners
+        fields:
+          - label: Partners
+            name: partners
+            label_singular: Partner
+            widget: list
+            fields:
+              - label: Name
+                name: name
+                widget: string
+                required: true
+              - label: Featured
+                name: featured
+                hint: When enabled this will show on the frontpage
+                widget: boolean
+                default: false
+              - label: Homepage
+                name: homepage
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+                hint: A short description about this partner and how we collaborate
+                required: false
+              - label: Logo
+                name: logo
+                widget: file
+                required: false

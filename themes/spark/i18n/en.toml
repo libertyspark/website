@@ -1,0 +1,71 @@
+[open_menu]
+other = "Open Menu"
+
+[close_menu]
+other = "Close Menu"
+
+[workflow]
+other = "Workflow"
+
+[home_hero_title]
+other = '<span class="block xl:inline">Turning your</span><span class="block text-yellow-500 xl:inline lg:ml-2 lg:mr-2">powerful ideas</span><span class="block xl:inline">into operational realities.</span>'
+
+[home_hero_subtitle]
+other = "We leverage the ingenuity of Airmen at RAF Lakenheath to create unique opportunities to collaborate with top problem solvers in industry, academia, and the government."
+
+[home_hero_connect_now]
+other = "Connect"
+
+[home_hero_learn_more]
+other = "Learn More"
+
+[about_us_title]
+other = "Who We Are"
+
+[about_us_subtitle]
+other = "A team of volunteer based professionals seeking to further the local community and our great Air Force by cultivating, curating and accelerating change at RAF Lakenheath."
+
+[partner_title]
+other = "Industry, Academia & Government Partners"
+
+[cultivate]
+other = "Cultivate"
+
+[cultivate_description]
+other = "Cultivate innovative Airmen’s problems and ideas and enable them to perform tactical experiments by connecting them with operators, acquisition officers, senior leaders, and commercial innovators."
+
+[curate]
+other = "Curate"
+
+[curate_description]
+other = "Curate ideas into ‘internal startups’ that experiment on the operational level by adding funding, building teams, and demonstrating with stakeholders on a part-time or temporary basis."
+
+[accelerate]
+other = "Accelerate"
+
+[accelerate_description]
+other = "Accelerate the most promising ‘internal startups’ to become permanently sustained within the Air and Space Force by allowing the teams to work full time to implement, operationalize and transition their vision."
+
+[features_title]
+other = "Liberty Lab"
+
+[features_subtitle]
+other = "Come check-out the new lab specifically designed for you."
+
+[team_title]
+other = "Meet our team"
+
+[team_subtitle]
+other = "Innovators for Innvoators"
+
+[contact_us_title]
+other = "Connect with the Liberty Spark team"
+
+[contact_us_subtitle]
+other = "We’d love to hear from you! Send us a message and we'll get back to you soon."
+
+[contact_form_submit_button]
+other = "Connect"
+
+[contact_form_tos]
+other = "By submitting this form you agree to our <a href=\"/tos\" class=\"underline text-yellow-700\">Terms of Service</a> and allow Liberty Spark to contact you regarding this message."

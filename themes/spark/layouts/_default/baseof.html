@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html
+  lang="{{ if and $.Site.LanguageCode (not .Page.Params.untranslated) }}{{ $.Site.LanguageCode }}{{ else }}en-US{{ end }}"
+>
+  {{ if .Page.Params.untranslated }}
+    {{ range .Page.Translations }}
+      {{ if eq "en" .Language.Lang }}
+        {{ partial "head" . }}
+      {{ end }}
+    {{ end }}
+    {{ else }}
+    {{ partial "head" . }}
+  {{ end }}
+
+  <body class="flex flex-col h-screen">
+    {{- partial "header.html" . -}}
+    <div id="content" class="flex-1 overflow-y-auto">
+      {{- block "main" . }}{{- end }}
+      {{- partial "footer.html" . -}}
+    </div>
+  </body>
+</html>

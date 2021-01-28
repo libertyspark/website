@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+<section class="relative text-gray-600 body-font relative py-16 bg-white overflow-hidden">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+    <div class="relative px-4 sm:px-6 lg:px-8 divide-y divide-gray-200">
+      <div class="text-lg max-w-prose mx-auto mb-6">
+        <p class="text-base text-center leading-6 text-yellow-600 font-semibold tracking-wide uppercase">
+          {{ .Title }}
+        </p>
+        <h1 class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold tracking-tight sm:text-4xl sm:leading-10">
+          {{ .Params.Subtitle }}
+        </h1>
+      </div>
+
+      <ul class="divide-y divide-gray-200">
+
+        {{ range .Pages }}
+        <li class="py-12">
+          <article class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
+            <dl>
+              <dt class="sr-only">Published on</dt>
+              <dd class="text-base leading-6 font-medium text-gray-500"><time datetime="2021-01-24T20:00:00Z">January
+                  24, 2021</time></dd>
+            </dl>
+            <div class="space-y-5 xl:col-span-3">
+              <div class="space-y-6">
+                <h2 class="text-2xl leading-8 font-bold tracking-tight"><a class="text-gray-900"
+                    href="/multi-line-truncation-with-tailwindcss-line-clamp">Multi-line truncation with
+                    @tailwindcss/line-clamp</a></h2>
+                <div class="prose max-w-none text-gray-500">
+                  <p>Imagine you're implementing a beautiful design you or someone on your team carefully crafted in
+                    Figma. You've nailed all the different layouts at each breakpoint, perfected the whitespace and
+                    typography, and the photography you're using is really bringing the design to life.</p>
+                  <p>It looks totally amazing — until you connect it your actual production content and realize that
+                    your beautiful grid of blog cards falls apart because, of course, <em>real</em> article excerpts
+                    aren't all magically exactly three lines long, and now each card is a different height.</p>
+                  <p>Sound familiar? If so, the line-clamp plugin is here to save your bacon.</p>
+                </div>
+              </div>
+              <div class="text-base leading-6 font-medium"><a class="text-yellow-500 hover:text-yellow-600"
+                  aria-label="Read &quot;Multi-line truncation with @tailwindcss/line-clamp&quot;"
+                  href="http://multi-line-truncation-with-tailwindcss-line-clamp">Read more →</a></div>
+            </div>
+          </article>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{{ end }}

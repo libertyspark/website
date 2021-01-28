@@ -1,0 +1,72 @@
+[
+  {
+    "fullName": "Isaac Holley",
+    "position": "CEO",
+    "email": "Isaac.holley@libertyspark.org",
+    "imageName": "images/team/isaac-holley.jpg",
+    "socialLinks": [
+      {
+        "handle": "ike.holley",
+        "brand": "linkedin"
+      }
+    ]
+  },
+  {
+    "fullName": "Jason Bullard",
+    "position": "Technology",
+    "email": "Jason.bullard@libertyspark.org",
+    "imageName": "images/team/jason-bullard.png",
+    "socialLinks": [
+      {
+        "handle": "jabull",
+        "brand": "linkedin"
+      },
+      {
+        "handle": "json-werx",
+        "brand": "github"
+      }
+    ]
+  },
+  {
+    "fullName": "Isaac Orona",
+    "position": "Programs",
+    "email": "Isaac.orona@libertyspark.org",
+    "imageName": "images/team/isaac-orona.jpg",
+    "socialLinks": [
+      {
+        "handle": "isaac-orona-43a955138",
+        "brand": "linkedin"
+      }
+    ]
+  },
+  {
+    "fullName": "William Riddle",
+    "position": "Innovation Lab",
+    "email": "William.riddle@libertyspark.org",
+    "imageName": "images/team/no-picture.png"
+  },
+  {
+    "fullName": "Rodney Collins",
+    "position": "Finance",
+    "email": "Rodney.collins@libertyspark.org",
+    "imageName": "images/team/no-picture.png"
+  },
+  {
+    "fullName": "Mike Bialaski",
+    "position": "Administrative",
+    "email": "mike.bialaski@libertyspark.org",
+    "imageName": "images/team/no-picture.png"
+  },
+  {
+    "fullName": "Charlie Geiser",
+    "position": "Marketing",
+    "email": "Charlie.geiser@libertyspark.org",
+    "imageName": "images/team/no-picture.png"
+  },
+  {
+    "fullName": "Joel Mullinax",
+    "position": "Networking",
+    "email": "Joel.mullinax@libertyspark.org",
+    "imageName": "images/team/no-picture.png"
+  }
+]

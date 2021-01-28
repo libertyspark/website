@@ -1,0 +1,33 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>
+    {{ block "title" . }} {{- .Title }} - {{ .Site.Title -}} {{ end }}
+  </title>
+
+  {{- if .Description }}
+    <meta name="description" content="{{ .Description }}" />
+  {{ end -}}
+
+  {{- if .Keywords }}
+    <meta name="keywords" content="{{ delimit .Keywords "," }}" />
+  {{ end -}}
+  
+  {{- if .Params.Author }}
+    <meta name="author" content="{{ .Params.Author }}" />
+  {{ end -}}
+  
+  {{ hugo.Generator }}
+
+  {{ $styles := resources.Get "css/base.scss" | toCSS (dict "enableSourceMap" true) | postCSS (dict "config" "./assets/css/postcss.config.js") }}
+  {{ if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}">
+  {{ else }}
+    {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+  {{ end }}
+
+  <script defer
+    src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+  ></script>
+</head>
