@@ -238,7 +238,7 @@
         </div>
       </div>
       <div class="lg:w-1/2 bg-white flex flex-col md:ml-auto w-full px-8 mb-8 lg:mb-0 order-1 lg:order-2">
-        <form name="contact" method="POST" netlify>
+        <form method="POST" action="https://formspree.io/f/xeqpvboq">
           <div class="relative mb-4">
             <label htmlFor="name" class="leading-7 text-sm text-gray-600">
               Name
@@ -265,7 +265,7 @@
             <label htmlFor="message" class="leading-7 text-sm text-gray-600">
               Message
             </label>
-            <textarea id="messageText" name="messageText" required
+            <textarea id="message" name="message" required
               placeholder="Explain your problem, provide examples, and any solutions you have"
               class="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
           </div>
@@ -276,6 +276,10 @@
             class="items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:border-yellow-700 active:bg-yellow-700 transition ease-in-out duration-150">
             {{ i18n "contact_form_submit_button" }}
           </button>
+          <button type="reset"
+          class="items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-600 focus:border-yellow-700 active:bg-yellow-700 transition ease-in-out duration-150">
+          {{ i18n "contact_form_reset_button" }}
+        </button>
         </form>
       </div>
     </div>
