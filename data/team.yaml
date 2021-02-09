@@ -1,0 +1,44 @@
+team:
+  - fullName: Issac Holley
+    position: CEO
+    email: issac.holley@libertyspark.org
+    profile: /images/team/isaac-holley.jpg
+    connections:
+      - brand: Linked-In
+        handle: ike-holley
+  - fullName: Jason Bullard
+    position: Technology
+    email: jason.bullard@libertyspark.org
+    profile: /images/team/jason-bullard.jpg
+    connections:
+      - brand: Linked-In
+        handle: jabull
+      - brand: Github
+        handle: json-werx
+  - fullName: Isaac Orona
+    position: Programs
+    email: isaac.orona@libertyspark.org
+    profile: /images/team/isaac-orona.jpg
+    connections:
+      - brand: Linked-In
+        handle: isaac-orona-43a955138
+  - fullName: William Riddle
+    position: Innovation Lab
+    email: William.riddle@libertyspark.org"
+    profile: /images/team/no-picture.png
+  - fullName: Rodney Collins
+    position: Finance
+    email: Rodney.collins@libertyspark.org
+    profile: /images/team/no-picture.png
+  - fullName: Mike Bialaski
+    position: Administrative
+    email: mike.bialaski@libertyspark.org
+    profile: /images/team/no-picture.png
+  - fullName: Charlie Geiser
+    position: Marketing
+    email: Charlie.geiser@libertyspark.org
+    profile: /images/team/no-picture.png
+  - fullName: Joel Mullinax
+    position: Networking
+    email: Joel.mullinax@libertyspark.org
+    profile: /images/team/no-picture.png

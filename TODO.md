@@ -1,0 +1,7 @@
+- [ ] Create a javascript modal that will alert the user the link requires a cac card
+- [ ] Find a place to put available resources to interact with the Spark Cell
+- [ ] Footer should include Privacy Policy, Accessibility, FOIA, No FEAR Act, and EEO
+- [ ] Footer should include social media links
+- [ ] Add a page for partners
+- [ ] Add Spark Colliders and Small Commercial Solutions
+- [ ] Change the Contact us button from that to How it Works later on

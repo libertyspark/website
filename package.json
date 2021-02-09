@@ -1,0 +1,26 @@
+{
+  "name": "libertyspark.org",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "email": "lab48@libertyspark.org",
+    "name": "Liberty Lab"
+  },
+  "scripts": {
+    "start": "hugo server -D --disableFastRender --ignoreCache",
+    "build": "hugo --gc --cleanDestinationDir"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.0",
+    "prettier-plugin-go-template": "^0.0.10",
+    "tailwindcss": "^2.0.2"
+  }
+}

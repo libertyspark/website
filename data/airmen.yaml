@@ -1,0 +1,33 @@
+resources:
+  - title: Unit Innovation Champion (UIC)
+    description: Liberty Spark's Airmen are here to help you make your project a reality. Whether product or process or a combination of our team of innovative & CPI trained Airmen are here to help you. We work with base leadership, other Spark Cells, AFWERX, the broader defense innovation community, and Industry to provide you with resources to transform your innovations from idea to reality.
+    more:
+      - title: Contact A Champion Today
+        url: "mailto:Unit Champion<LSCUnitInnovationChampions@USAF.onmicrosoft.com>?subject=Idea Assistance Request"
+        isSpark: true
+  - title: Squadron Innovation Funds (SIF)
+    description: In an era of great power competition, our squadrons, more than ever, are the heartbeat of the Air Force. To foster innovation at the level of command that makes the most significant impact, CSAF General Charles Q. Brown Jr. and Secretary of The Air Force Barbara M. Barrett championed the fourth year of Squadron Innovation Funds (SIF) for fiscal year 2021 so commanders can tackle their most pressing readiness and national security challenges. In keeping with previous guidance, we must continue to THINK BIG, start small, and Scale Fast. To learn more about SIF, check out our USAF Liberty Spark Team SharePoint, or swing by the innovation lab.
+    more:
+      - title: Submit My Idea (CAC Required)
+        url: https://usaf.ideascalegov.com/a/ideas/recent/campaign-filter/byids/campaigns/208/stage/unspecified
+        cacRequired: true
+  - title: AFWERX
+    description: AFWERX is a network of people who want to help create a better Air Force for all Airmen. Some innovators work for AFWERX full-time, others who take on passion projects outside of their traditional jobs and tap into the AFWERX ecosystem for support, and plenty more who collaborate with us as part of their position at Air Force bases around the world. Because AFWERX is fueled by people with a diverse set of skills, passions, and roles in the Air Force, the list of initiatives and resources we have access to is always growing. The following outline of Airmen resources is not all-inclusive. Still, it is a starting point for understanding the AFWERX ecosystem and how to use it at your units, wings, major commands, and within the Air Force as a whole.
+    more:
+      - title: Learn More
+        url: https://afwerx.com
+  - title: Spark Tank
+    description: "Spark Tank is an annual event where Airmen pitch innovative ideas to top Air Force leadership and a panel of industry experts. Hosted each year at the Air Force Association's Warfare Symposium, thousands of attendees watch as Air Force leaders encourage Airmen to disrupt the status quo.
+    
+    Finalists are selected based on specific capabilities and concerns of safety, policy, Air Force-wide implementation, technical feasibility, and scalability. Following the event, they receive project management support and other resources to implement their ideas."
+    more:
+      - title: Contact Us
+        url: /contact/
+        isSpark: true
+  - title: Small Business Innnovation Research (SBIR)
+    description: AFWERX, in partnership with Air Force Research Lab (AFRL), and the National Security Innovation Network (NSIN), developed the SBIR Open Topics to increase the efficiency, effectiveness, and transition rate of the SBIR program. Through a competitive awards-based program, the Small Business Innovation Research (SBIR) program enables small businesses to explore their technological potential and provides the incentive to profit from its commercialization.
+    more:
+      - title: Learn More about America's Seed Fund
+        url: https://www.sbir.gov/about
+  - title: Continuous Process Improvement (CPI)
+    description: Continuous Process Improvement efforts focus on process effectiveness and efficiency across the AF using principles applicable to all work processes. Grounded in proven, industry-standard process-improvement tactics, CPI aims to significantly increase Air Force combat capabilities and replicate across the DoD where possible.
