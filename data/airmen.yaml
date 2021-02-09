@@ -22,7 +22,7 @@ resources:
     Finalists are selected based on specific capabilities and concerns of safety, policy, Air Force-wide implementation, technical feasibility, and scalability. Following the event, they receive project management support and other resources to implement their ideas."
     more:
       - title: Contact Us
-        url: /contact/
+        url: /#contact
         isSpark: true
   - title: Small Business Innnovation Research (SBIR)
     description: AFWERX, in partnership with Air Force Research Lab (AFRL), and the National Security Innovation Network (NSIN), developed the SBIR Open Topics to increase the efficiency, effectiveness, and transition rate of the SBIR program. Through a competitive awards-based program, the Small Business Innovation Research (SBIR) program enables small businesses to explore their technological potential and provides the incentive to profit from its commercialization.
