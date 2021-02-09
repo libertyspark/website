@@ -1,0 +1,22 @@
+{{- define "main" -}}
+{{ $bgImage := resources.Get .Params.Image }}
+
+<div class="text-center bg-cover"
+  style="height: 600px; background-image: url('{{ $bgImage.Permalink }}'); background-position: center;">
+  <div class="relative flex items-center min-h-full">
+    <div class="absolute bg-black opacity-50 inset-0"></div>
+    <div class="z-10 max-w-2xl mx-auto">
+      <h2 class="text-5xl mb-8 leading-tight font-semibold font-heading text-white">{{ .Title }}</h2>
+      <p class="my-6 text-gray-900 text-3xl bg-yellow-400 px-4 py-2">{{ .Params.Subtitle }}</p>
+    </div>
+  </div>
+</div>
+
+<section id="{{ .Params.Identifier }}">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6">
+    <div class="container mx-auto">
+      {{ .Content | safeHTML }}
+    </div>
+  </div>
+  
+  {{ end }}

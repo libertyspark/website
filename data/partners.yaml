@@ -1,0 +1,28 @@
+partners:
+  - partner: AFWERX
+    homepage: https://afwerx.af.mil
+    featured: true
+  - partner: AFRL - Air Force Research Laboratory
+    homepage: https://afrl.af.mil
+    featured: true
+  - partner: BMNT
+    homepage: https://bmnt.com
+    featured: true
+  - partner: Established US
+    homepage: https://established.us
+    featured: true
+  - partner: AF CyberWorx
+    homepage: https://afcyberworx.org
+    featured: false
+  - partner: DIB - Defense Innovation Board
+    homepage: https://innovation.defense.gov
+    featured: false
+  - partner: DefenseWerx
+    homepage: https://defensewerx.org
+    featured: false
+  - partner: SOFWerx
+    homepage: https://sofwerx.org
+    featured: false
+  - partner: Wright Brothers Institue
+    homepage: https://wbi-innovates.com
+    featured: false

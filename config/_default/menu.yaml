@@ -1,0 +1,17 @@
+main:
+  - identifier: airmen
+    name: Airmen
+    url: /airmen/
+    weight: 10
+  - identifier: lab
+    name: Lab 48
+    url: /lab/
+    weight: 20
+  # - identifier: how-it-works
+  #   name: How It Works
+  #   url: /how-it-works/
+  #   weight: 30
+  - identifier: contact
+    name: Contact Us
+    url: "/#contact"
+    weight: 40

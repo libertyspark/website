@@ -1,0 +1,23 @@
+<div class="mt-10">
+  <div class="md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-8">
+    {{ range $.Site.Data.services.services }}
+      <div class="flex mt-10 md:mt-5">
+        <div class="flex-shrink-0">
+          <div
+            class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white"
+          >
+            {{ partial "svg" (dict "svgPath" .icon "class" "h-8 w-8 text-white") }}
+          </div>
+        </div>
+        <div class="ml-4">
+          <h4 class="text-lg leading-6 font-medium text-gray-900">
+            {{ .name }}
+          </h4>
+          <p class="mt-2 text-base leading-6 text-gray-500">
+            {{ .description }}
+          </p>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>

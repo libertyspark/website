@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  {{ partial "head" . }}
+
+  <body class="flex flex-col h-screen w-screen">
+    {{ partial "nav/nav" . }}
+  
+    {{- block "main" . }}{{- end }}
+
+    {{- partial "footer.html" . -}}
+
+    {{ $js := resources.Get "js/site.js" }}
+    {{ $js := $js | resources.Minify }}
+    <script src="{{ $js.Permalink }}"></script>
+  </body>
+</html>
