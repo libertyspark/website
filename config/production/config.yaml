@@ -1,3 +1,6 @@
 baseURL: https://www.libertyspark.org
 title: Liberty Spark
 public_folder: /images
+
+build:
+  writeStats: true

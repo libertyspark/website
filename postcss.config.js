@@ -10,9 +10,13 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 
 module.exports = {
   plugins: [
-    require("postcss-import"),
+    require("postcss-import")({
+      path: './'
+    }),
     require("tailwindcss"),
-    require("autoprefixer"),
+    require("autoprefixer")({
+      path: './'
+    }),
     ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss] : []),
   ],
 };

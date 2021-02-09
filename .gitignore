@@ -1,6 +1,12 @@
 # only required for firebase deploy
 public
 
+# Hugo stats for PostCSS
+hugo_stats.json
+
+# Hugo cache
+resources/
+
 # Logs
 logs
 *.log
